@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Image from "next/image";
 // Define the type for a single card's data
 type CardData = {
   imageUrl: string;
@@ -51,9 +51,11 @@ const Cards: React.FC = () => {
           >
             {/* Card Image */}
             <div className="w-full h-48 overflow-hidden">
-              <img
+              <Image
                 src={card.imageUrl}
                 alt={card.title}
+                width={800}
+                height={600}
                 className="w-full h-full object-cover"
               />
             </div>

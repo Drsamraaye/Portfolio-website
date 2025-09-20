@@ -1,10 +1,10 @@
 'use client'
 import Link from 'next/link'
-import { Logo } from '@/components/logo' // Assuming this is your logo component
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import React from 'react'
 import { cn } from '@/lib/utils'
+import Image from "next/image";
 
 const menuItems = [
     { name:'Home', href: '#home' },
@@ -32,10 +32,12 @@ export const HeroHeader = () => {
                     <div className="relative flex flex-wrap items-center justify-between gap-3 py-1 lg:gap-0 lg:py-0">
                         {/* Logo */}
                         <a href="#Home">
-                        
-                           
-                            <img className='w-30' src="/imges/Black_And_White_Illustrated_Eagle_Logo-removebg-preview.png" alt="Guild Logo" />
-                        
+                             <Image
+                            src="/imges/Black_And_White_Illustrated_Eagle_Logo-removebg-preview.png"
+                            alt="My photo"
+                            width={90}
+                            height={300}
+                        />
                         </a>
 
                         {/* Desktop Navigation Links */}

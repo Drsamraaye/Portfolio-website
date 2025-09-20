@@ -1,5 +1,4 @@
-import { ChevronRight } from 'lucide-react'
-import Link from 'next/link'
+import Image from 'next/image'
 import { InfiniteSlider } from '@/components/ui/infinite-slider'
 import { ProgressiveBlur } from '@/components/ui/progressive-blur'
 
@@ -15,79 +14,71 @@ export default function LogoCloudTwo() {
                                     speedOnHover={20}
                                     speed={40}
                                     gap={112}>
-                                    <div className="flex">
-                                        <img
-                                            className="mx-auto w-8 dark:invert"
-                                            src="/imges/icons8-nodejs-48.png"
-                                            alt="Nvidia Logo"
-                                            height="20"
-                                            width="auto"
-                                        />
+                                    <div className="flex">  
+                                            <Image
+                                                                    src="/imges/icons8-nodejs-48.png"
+                                                                    alt="My photo"
+                                                                    width={40}
+                                                                    height={10}
+                                                                />
                                     </div>
 
-                                    <div className="flex">
-                                        <img
-                                            className="mx-auto w-8 dark:invert"
-                                            src="/imges/postgreesql_48px.png"
-                                            alt="Column Logo"
-                                            height="16"
-                                            width="auto"
-                                        />
+                                    <div className="flex"> 
+                                           <Image
+                                                                   src="/imges/postgreesql_48px.png"
+                                                                   alt="My photo"
+                                                                   width={40}
+                                                                   height={10}
+                                                               />
+                                    </div>
+                                    <div className="flex"> 
+                                           <Image
+                                                                   src="/imges/github_26px.png"
+                                                                   alt="My photo"
+                                                                   width={40}
+                                                                   height={10}
+                                                               />
                                     </div>
                                     <div className="flex">
-                                        <img
-                                            className="mx-auto w-8 dark:invert"
-                                            src="/imges/github_26px.png"
-                                            alt="GitHub Logo"
-                                            height="16"
-                                            width="auto"
-                                        />
+                                            <Image
+                                                                    src="/imges/icons8-nextjs-64.png"
+                                                                    alt="My photo"
+                                                                    width={40}
+                                                                    height={10}
+                                                                />
+                                    </div>
+                                    <div className="flex"> 
+                                            <Image
+                                                                    src="/imges/javascript_48px.png"
+                                                                    alt="My photo"
+                                                                    width={40}
+                                                                    height={20}
+                                                                />
+                                    </div>
+                                    <div className="flex"> 
+                                            <Image
+                                                                    src="/imges/swift_48px.png"
+                                                                    alt="My photo"
+                                                                    width={40}
+                                                                    height={10}
+                                                                />
                                     </div>
                                     <div className="flex">
-                                        <img
-                                            className="mx-auto w-8 dark:invert"
-                                            src="/imges/icons8-nextjs-64.png"
-                                            alt="Nike Logo"
-                                            height="20"
-                                            width="auto"
-                                        />
-                                    </div>
-                                    <div className="flex">
-                                        <img
-                                            className="mx-auto w-8 dark:invert"
-                                            src="/imges/javascript_48px.png"
-                                            alt="Lemon Squeezy Logo"
-                                            height="20"
-                                            width="50"
-                                        />
-                                    </div>
-                                    <div className="flex">
-                                        <img
-                                            className="mx-auto w-8 dark:invert"
-                                            src="/imges/swift_48px.png"
-                                            alt="Laravel Logo"
-                                            height="16"
-                                            width="auto"
-                                        />
-                                    </div>
-                                    <div className="flex">
-                                        <img
-                                            className="mx-auto w-8 dark:invert"
-                                            src="/imges/mysql_48px.png"
-                                            alt="Lilly Logo"
-                                            height="28"
-                                            width="auto"
-                                        />
+                                            <Image
+                                                                    src="/imges/mysql_48px.png"
+                                                                    alt="My photo"
+                                                                    width={40}
+                                                                    height={10}
+                                                                />
                                     </div>
 
-                                    <div className="flex">
-                                        <img
-                                            className="mx-auto h-6 w-fit dark:invert"
+                                    <div className="flex">   
+                                            <Image
                                             src="/imges/visual_studio_48px.png"
-                                            alt="OpenAI Logo"
-                                            height="24"
-                                            width="auto"
-                                        />
+                                            alt="My photo"
+                                            width={40}
+                                            height={10}
+                                                                />
                                     </div>
                                 </InfiniteSlider>
 

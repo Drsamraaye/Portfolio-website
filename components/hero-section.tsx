@@ -1,21 +1,20 @@
 import React from 'react'
-import Link from 'next/link'
-import { Button } from '@/components/ui/button'
-import Image from 'next/image'
 import { HeroHeader } from "@/components/header"
 
 import LogoCloudTwo from './logo-cloud'
 import StatsSection from './stats'
-import Skills from './skills'
-import FAQs from './Aboutme'
+
+import Image from "next/image";
 
 
 import Products from './cards'
 import AboutMe from './Aboutme'
-import App from 'next/app'
+
 import Service from './service'
 import Education from './Education'
 import FooterSection from './footer'
+
+
 
 
 
@@ -29,7 +28,7 @@ export default function HeroSection() {
         {/* Left side: Text and button */}
         <div className="text-center md:text-left md:w-1/2">
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-black leading-tight tracking-tight">
-          Hi, I'm <br />Full-stack Developer
+          Hi, I&apos;m <br />Full-stack Developer
           </h1>
           <p className="mt-6 text-lg sm:text-xl  text-black max-w-lg mx-auto md:mx-0">
            I am a passionate Full-Stack Developer and Digital Marketer, dedicated to building modern, responsive, and user-friendly web applications.
@@ -48,7 +47,13 @@ export default function HeroSection() {
           <div className="relative w-full max-w-sm aspect-[9/9] rounded-full bg-black shadow-2xl overflow-hidden">
             {/* Inner placeholder to mimic a screen */}
             <div className="absolute inset-2 rounded-full bg-zinc-300 flex items-center justify-center">
-              <img className='-p-50' src="/imges/WhatsApp_Image_2025-09-17_at_18.40.19_8ac072c5-removebg-preview.png" alt="" />
+              <Image 
+              src="/imges/WhatsApp_Image_2025-09-17_at_18.40.19_8ac072c5-removebg-preview.png"
+              alt=""
+              fill
+              style={{objectFit:"cover"}}
+              />
+       
             </div>
           </div>
         </div>
@@ -62,6 +67,7 @@ export default function HeroSection() {
             <Products />
             <Service/>
           <Education/>
+
           <StatsSection/>
           <FooterSection/>
                  </main>
