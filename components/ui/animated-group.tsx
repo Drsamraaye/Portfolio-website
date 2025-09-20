@@ -1,7 +1,6 @@
 'use client';
 import React, { ReactNode, ElementType, useMemo } from 'react';
-import { motion, Variants, TargetAndTransition } from 'framer-motion';
-
+import { motion, Variants } from 'framer-motion';
 
 export type PresetType =
   | 'fade'
@@ -22,7 +21,6 @@ export type AnimatedGroupProps = {
     container?: Variants;
     item?: Variants;
   };
-  
   preset?: PresetType;
   as?: ElementType;      // Use ElementType instead of JSX.IntrinsicElements
   asChild?: ElementType; // Use ElementType instead of JSX.IntrinsicElements
