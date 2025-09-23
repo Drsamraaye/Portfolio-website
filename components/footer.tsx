@@ -34,7 +34,7 @@ const links = [
                 href: '#Resume',
             },
             {
-                title: 'Created websites',
+                title: 'websites',
                 href: '#Create',
             },
             {
@@ -42,7 +42,7 @@ const links = [
                 href: '#Eduaction',
             },
               {
-                title: 'Work Experience',
+                title: 'Experience',
                 href: '#Work',
             },
             
@@ -56,7 +56,7 @@ const links = [
                 href: '#contact',
             },
             {
-                title: 'Work status',
+                title: 'Status',
                 href: '#Workstatus',
             },
         ],

@@ -30,10 +30,10 @@ const Cards: React.FC = () => {
 
   return (
 
-    <section id='#Create' className='bg-zinc-300'>
+    <section  className='bg-zinc-300'>
 
     
-    <div  className=''>
+    <div id='#Create' className=''>
       <div className="relative z-20 mt-30 mx-auto max-w-xl space-y-6 text-center ">
                     <h2 className="text-4xl font-bold lg:text-5xl text-black p-10 ">Created websites</h2>
                     <p className='-mt-10'>I am a passionate Full-Stack Developer and Digital Marketer, dedicated to building modern, responsive, and user-friendly web applications.</p>

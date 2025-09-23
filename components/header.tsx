@@ -9,7 +9,8 @@ import Image from "next/image";
 const menuItems = [
     { name:'Home', href: '#home' },
     { name: 'Resume', href: '#Resume' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Experience', href: '#Work' },
+    { name: 'Education', href: '#Eduaction' }
 ]
 
 export const HeroHeader = () => {
