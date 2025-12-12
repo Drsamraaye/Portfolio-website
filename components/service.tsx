@@ -74,7 +74,7 @@ const Service: React.FC = () => {
 
         {/* Services Grid */}
         <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <div
               key={service.id}
               className="group relative p-1 rounded-3xl bg-transparent transition-all duration-300 hover:-translate-y-2"

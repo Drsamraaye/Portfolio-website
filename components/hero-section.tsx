@@ -84,10 +84,22 @@ export default function HeroSection() {
 
                   {/* Floating Tech Badges */}
                   <div className="absolute -left-4 top-1/4 glass p-3 rounded-2xl animate-bounce-slow shadow-lg border border-white/20 dark:border-white/5">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="w-8 h-8" alt="React" />
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                      width={32}
+                      height={32}
+                      className="w-8 h-8"
+                      alt="React"
+                    />
                   </div>
                   <div className="absolute -right-4 bottom-1/3 glass p-3 rounded-2xl animate-bounce-slow delay-700 shadow-lg border border-white/20 dark:border-white/5">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" className="w-8 h-8 dark:invert" alt="Next.js" />
+                    <Image
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                      width={32}
+                      height={32}
+                      className="w-8 h-8 dark:invert"
+                      alt="Next.js"
+                    />
                   </div>
                 </div>
               </div>

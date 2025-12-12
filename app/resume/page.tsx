@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import { HeroHeader } from "@/components/header"
-import { ModeToggle } from "@/components/mode-toggle"
+
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { Download, ArrowLeft } from 'lucide-react'
@@ -46,7 +46,7 @@ export default function ResumePage() {
                             </div>
                             <h3 className="text-xl font-bold text-foreground">Preview Not Available</h3>
                             <p className="max-w-md">
-                                Your browser doesn't support PDF embedding. You can download the resume to view it.
+                                Your browser doesn&apos;t support PDF embedding. You can download the resume to view it.
                             </p>
                             <a href="/CV.pdf" download="Guiled_Hussein_CV.pdf">
                                 <Button variant="outline" className="mt-4">
