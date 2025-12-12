@@ -2,109 +2,129 @@
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { cn } from '@/lib/utils'
 import Image from "next/image";
+import { ModeToggle } from './mode-toggle';
 
 const menuItems = [
-    { name:'Home', href: '#home' },
-    { name: 'Resume', href: '#Resume' },
-    { name: 'Experience', href: '#Work' },
-    { name: 'Education', href: '#Eduaction' }
+    { name: 'Home', href: '#home' },
+    { name: 'About', href: '#Resume' },
+    { name: 'Services', href: '#Work' },
+    { name: 'Portfolio', href: '#Project' },
+    { name: 'Education', href: '#Education' },
+    { name: 'Resume', href: '/resume' }
 ]
 
 export const HeroHeader = () => {
-    const [menuState, setMenuState] = React.useState(false)
-    const [isScrolled, setIsScrolled] = React.useState(false)
+    const [menuState, setMenuState] = useState(false)
+    const [isScrolled, setIsScrolled] = useState(false)
 
-    React.useEffect(() => {
+    useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50)
+            setIsScrolled(window.scrollY > 20)
         }
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
     return (
-        <header>
+        <header className="fixed top-0 left-0 right-0 z-50 py-4 px-4 md:px-8 flex justify-center transition-all duration-300">
             <nav
-                className="fixed z-20 w-full px-1 -p-14">
-                <div className={cn('mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-8', isScrolled && 'bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5')}>
-                    <div className="relative flex flex-wrap items-center justify-between gap-3 py-1 lg:gap-0 lg:py-0">
-                        {/* Logo */}
-                        <a href="#Home">
-                             <Image
-                            src="/imges/Black_And_White_Illustrated_Eagle_Logo-removebg-preview.png"
-                            alt="My photo"
-                            width={90}
-                            height={300}
-                        />
-                        </a>
+                className={cn(
+                    "w-full max-w-5xl rounded-full transition-all duration-500 ease-in-out border border-transparent",
+                    isScrolled
+                        ? "bg-white/10 dark:bg-black/20 backdrop-blur-xl shadow-xl border-white/20 dark:border-white/10 py-2.5 px-6"
+                        : "bg-transparent py-4 px-4"
+                )}
+            >
+                <div className="flex items-center justify-between">
+                    {/* Logo Area */}
+                    <div className="flex items-center gap-2">
+                        <Link href="#home" className="relative h-10 w-10 overflow-hidden rounded-full border border-white/10 shadow-lg group">
+                            <Image
+                                src="/imges/WhatsApp Image 2025-09-18 at 18.12.17_736e82e5.jpg" // Using your actual profile image as logo for personal brand feel
+                                alt="Logo"
+                                fill
+                                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                            />
+                        </Link>
+                        <span className={cn(
+                            "font-bold text-lg tracking-tight hidden sm:block transition-all duration-300",
+                            isScrolled ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
+                        )}>
+                            Guiled<span className="text-primary">.dev</span>
+                        </span>
+                    </div>
 
-                        {/* Desktop Navigation Links */}
-                        <div className="hidden lg:block">
-                            <ul className="flex gap-8 text-sm">
-                                {menuItems.map((item, index) => (
-                                    <li key={index}>
-                                        <Link
-                                            href={item.href}
-                                            className="text-muted-foreground hover:text-accent-foreground duration-150">
-                                            {item.name}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        
-                        {/* Dashboard Button */}
-                        <div className="hidden lg:block">
-                            <Button asChild size="sm">
-                                <Link href="#contact">
-                                    Hire me
+                    {/* Desktop Navigation */}
+                    <ul className="hidden md:flex items-center gap-1 bg-white/5 dark:bg-black/20 rounded-full px-2 py-1.5 border border-white/5 backdrop-blur-sm">
+                        {menuItems.map((item) => (
+                            <li key={item.name}>
+                                <Link
+                                    href={item.href}
+                                    className="px-5 py-2 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-white/10 dark:hover:bg-white/5 rounded-full transition-all duration-300"
+                                >
+                                    {item.name}
                                 </Link>
-                            </Button>
-                        </div>
+                            </li>
+                        ))}
+                    </ul>
 
-                        {/* Mobile Menu Button */}
-                        <div className="lg:hidden">
+                    {/* Right Actions */}
+                    <div className="flex items-center gap-3">
+                        <ModeToggle />
+
+                        <Button asChild size="sm" className="hidden sm:inline-flex rounded-full px-6 shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all duration-300">
+                            <Link href="#contact">
+                                Hire Me
+                            </Link>
+                        </Button>
+
+                        {/* Mobile Menu Toggle */}
+                        <div className="md:hidden">
                             <Button
                                 onClick={() => setMenuState(!menuState)}
                                 variant="ghost"
-                                size="sm"
-                                className="z-50"
+                                size="icon"
+                                className="rounded-full hover:bg-white/10"
                             >
-                                {menuState ? <X size={24} /> : <Menu size={24} />}
+                                {menuState ? <X size={20} /> : <Menu size={20} />}
                             </Button>
                         </div>
                     </div>
                 </div>
 
-                {/* Mobile Menu */}
+                {/* Mobile Menu Dropdown */}
                 <div
-                    data-state={menuState && 'active'}
-                    className="absolute inset-x-0 top-0 mt-28 hidden w-full transform-gpu overflow-hidden px-6 transition-all duration-300 data-[state=active]:block lg:hidden"
+                    className={cn(
+                        "absolute top-full left-0 right-0 mt-4 p-4 transition-all duration-300 origin-top transform",
+                        menuState
+                            ? "opacity-100 scale-100 translate-y-0 visible"
+                            : "opacity-0 scale-95 -translate-y-4 invisible"
+                    )}
                 >
-                    <div className="rounded-3xl border bg-background p-6 shadow-2xl">
-                        <ul className="space-y-6 text-base">
-                            {menuItems.map((item, index) => (
-                                <li key={index}>
+                    <div className="glass-card rounded-3xl p-6 shadow-2xl overflow-hidden">
+                        <ul className="flex flex-col gap-2">
+                            {menuItems.map((item) => (
+                                <li key={item.name}>
                                     <Link
                                         href={item.href}
-                                        className="text-muted-foreground hover:text-accent-foreground block duration-150"
-                                        onClick={() => setMenuState(false)} // Close menu on link click
+                                        className="block p-4 text-center text-lg font-medium text-muted-foreground hover:text-white hover:bg-primary/20 rounded-2xl transition-all duration-200"
+                                        onClick={() => setMenuState(false)}
                                     >
                                         {item.name}
                                     </Link>
                                 </li>
                             ))}
+                            <li className="pt-4 border-t border-white/10 mt-2">
+                                <Button asChild className="w-full rounded-xl py-6 text-lg" onClick={() => setMenuState(false)}>
+                                    <Link href="#contact">
+                                        Hire Me Now
+                                    </Link>
+                                </Button>
+                            </li>
                         </ul>
-                        <div className="mt-6">
-                            <Button asChild className="w-full" onClick={() => setMenuState(false)}>
-                                <Link href="#contact">
-                                    Hire
-                                </Link>
-                            </Button>
-                        </div>
                     </div>
                 </div>
             </nav>

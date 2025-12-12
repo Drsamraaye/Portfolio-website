@@ -1,7 +1,6 @@
 // src/components/Service.tsx
 import React from 'react';
 
-// Define the type for a single service item.
 interface ServiceItem {
   id: number;
   icon: React.ReactNode;
@@ -9,99 +8,97 @@ interface ServiceItem {
   description: string;
 }
 
-// Data for each service, including SVG icons.
 const services: ServiceItem[] = [
   {
     id: 1,
     icon: (
-      <svg xmlns="/imges/marketing_64px.png" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M4 2C2.89543 2 2 2.89543 2 4V16C2 17.1046 2.89543 18 4 18H20C21.1046 18 22 17.1046 22 16V4C22 2.89543 21.1046 2 20 2H4Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M2 12H22" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M10 22L14 22" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 20h9" />
+        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
       </svg>
     ),
     title: 'Digital Marketing',
-    description: 'I am a professional in Digital Marketing, experienced in strategies that boost online presence and growth.'
+    description: 'Data-driven strategies that amplify your brand. I specialize in SEO, content marketing, and analytics to deliver measurable ROI.'
   },
   {
     id: 2,
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM12 4C13.6569 4 15 5.34315 15 7H9C9 5.34315 10.3431 4 12 4ZM19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M12 8V12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M12 12L15 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+        <line x1="8" y1="21" x2="16" y2="21" />
+        <line x1="12" y1="17" x2="12" y2="21" />
       </svg>
     ),
-    title: 'Full-stack Developer',
-    description: 'As a Full-Stack Developer, I have hands-on experience building complete web applications from front-end to back-end.'
+    title: 'Full-Stack Development',
+    description: 'Scalable, high-performance applications built with Next.js and Node.js. I deliver robust solutions from database design to pixel-perfect UIs.'
   },
   {
     id: 3,
     icon: (
-      <svg xmlns="/imges/code_48px.png" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M4 22H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M4 14L8 10L12 14L16 10L20 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M12 6L12 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M16 10L16 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M8 10L8 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
       </svg>
     ),
-    title: 'Graphic Design',
-    description: 'I am an experienced Graphic Designer with a strong eye for creativity and detail. I specialize in creating visually appealing designs such as logos, posters, banners, and social media. '
+    title: 'UI/UX & Design',
+    description: 'Designing intuitive, engaging interfaces. I create visually stunning brand identities and web experiences that captivate users.'
   },
   {
     id: 4,
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M22 11.08V12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2C13.25 2 14.47 2.29 15.61 2.85" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M9.5 11L11.5 13L15.5 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
       </svg>
     ),
-    title: 'Content Creation',
-    description: 'I am skilled in Content Creation, with experience in writing, storytelling, and developing engaging digital content.'
+    title: 'Content Strategy',
+    description: 'Compelling narratives that resonate. I develop content strategies that align with your business goals and engage your target audience.'
   },
 ];
 
 const Service: React.FC = () => {
   return (
-    <section id='Work' className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Headings */}
-        <div className="text-center">
-          <h2 className="text-sm font-bold uppercase text-gray-400 tracking-wider">SERVICES</h2>
-          <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-            Work experience
+    <section id='Work' className="py-24 bg-transparent relative">
+      <div className="container mx-auto px-4 md:px-8">
+
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-20 animate-slide-up">
+          <h2 className="text-sm font-bold uppercase text-primary tracking-[0.2em] mb-3">EXPERTISE</h2>
+          <h3 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            Professional Services
+          </h3>
+          <p className="text-muted-foreground text-lg font-light leading-relaxed">
+            I combine technical expertise with creative problem-solving to deliver comprehensive digital solutions.
           </p>
         </div>
-        
-        {/* Responsive Grid for Service Cards */}
-        <div className="mt-12 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-          {services.map((service) => (
+
+        {/* Services Grid */}
+        <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+          {services.map((service, index) => (
             <div
               key={service.id}
-              className="p-8 bg-white rounded-lg shadow-lg border-2 border-transparent transition-all duration-300
-              hover:shadow-xl hover:border-purple-500"
+              className="group relative p-1 rounded-3xl bg-transparent transition-all duration-300 hover:-translate-y-2"
             >
-              {/* Icon Container */}
-              <div className="w-fit p-3 bg-purple-100 text-purple-600 rounded-lg">
-                {service.icon}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
+
+              <div className="relative h-full bg-card/40 backdrop-blur-xl border border-border p-8 rounded-3xl overflow-hidden hover:border-primary/30 transition-colors">
+
+                {/* Hover Gradient Bloom */}
+                <div className="absolute -right-10 -top-10 w-32 h-32 bg-primary/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                {/* Icon */}
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/10 to-transparent border border-primary/10 flex items-center justify-center text-primary mb-8 group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
+                  {service.icon}
+                </div>
+
+                <h4 className="text-xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
+                  {service.title}
+                </h4>
+
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  {service.description}
+                </p>
               </div>
-              
-              {/* Title */}
-              <h3 className="mt-6 text-xl font-bold text-gray-900">
-                {service.title}
-              </h3>
-              
-              {/* Description */}
-              <p className="mt-2 text-gray-600 leading-relaxed">
-                {service.description}
-              </p>
-              
-              {/* "Know More" Link */}
-              <a href="#" className="mt-4 inline-flex items-center text-purple-600 font-semibold text-sm group">
-                Know More
-                <span className="ml-1 transition-transform duration-300 group-hover:translate-x-1">→</span>
-              </a>
             </div>
           ))}
         </div>
