@@ -55,13 +55,7 @@ const projects: Project[] = [
     description: 'Delivering precise, location-based weather data through a beautifully animated interface.',
     tech: ['API Integration', 'Chart.js'],
   },
-  {
-    image: '/imges/Screenshot 2025-09-18 123935.png',
-    title: 'Social Analytics',
-    category: 'Dashboard',
-    description: 'Empowering brands with deep insights through comprehensive data visualization of social media performance.',
-    tech: ['D3.js', 'Next.js', 'Analytics'],
-  },
+
 ];
 
 const Cards: React.FC = () => {
