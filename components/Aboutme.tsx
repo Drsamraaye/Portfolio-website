@@ -92,7 +92,7 @@ const AboutMe: React.FC = () => {
           </div>
 
           <div className="pt-4">
-            <a href="/CV.pdf" download="Guiled_Hussein_CV.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/imges/GreenElegantProfessionalResume(1).pdf" download="Guiled_Hussein_Resume.pdf" target="_blank" rel="noopener noreferrer">
               <button className="px-10 py-4 rounded-xl font-bold text-primary-foreground bg-primary hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/25 group flex items-center gap-3">
                 Download Resume
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">

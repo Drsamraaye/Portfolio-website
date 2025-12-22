@@ -13,6 +13,14 @@ interface Project {
 
 const projects: Project[] = [
   {
+    image: '/kaydso-project.png',
+    title: 'Kaydso - Drought Early Warning System',
+    category: 'Social Impact • Award Winner',
+    description: 'Government-first early warning system for drought, water scarcity, and food storage risk. Winner of 3rd place at XALKA DOON 2025 hackathon with $2,000 prize.',
+    tech: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL', 'PostGIS'],
+    link: 'https://landinpage-dun.vercel.app/'
+  },
+  {
     image: '/imges/translation-app.png',
     title: 'English to Somali Translator',
     category: 'Web Application',
@@ -22,18 +30,12 @@ const projects: Project[] = [
   },
   {
     image: '/imges/Screenshot 2025-09-18 123024.png',
-    title: 'Professional Portfolio',
+    title: 'Airbnb Clone (Sample)',
     category: 'Web Development',
     description: 'A high-performance personal portfolio engaging visuals and smooth animations. Built to showcase skills and projects with a premium aesthetic.',
     tech: ['Next.js', 'Tailwind', 'Framer'],
   },
-  {
-    image: '/imges/today-fashion-free-ecommerce-website-templates.jpg',
-    title: 'Luxe E-Commerce',
-    category: 'Full Stack',
-    description: 'Orchestrating a seamless shopping experience with secure payments and real-time inventory tracking. Features a robust admin dashboard.',
-    tech: ['React', 'Node.js', 'Stripe'],
-  },
+
   {
     image: '/imges/youtube.png',
     title: 'StreamHub',
@@ -43,7 +45,7 @@ const projects: Project[] = [
   },
   {
     image: '/imges/Screenshot 2025-09-18 123344.png',
-    title: 'TaskMaster Pro',
+    title: 'Professional Portfolio',
     category: 'Productivity',
     description: 'Enhancing team collaboration with intuitive Kanban boards and real-time progress visualization.',
     tech: ['React', 'Firebase', 'Redux'],

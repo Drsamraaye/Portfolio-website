@@ -48,7 +48,7 @@ export default function ResumePage() {
                             <p className="max-w-md">
                                 Your browser doesn&apos;t support PDF embedding. You can download the resume to view it.
                             </p>
-                            <a href="/CV.pdf" download="Guiled_Hussein_CV.pdf">
+                            <a href="/CV.pdf" download="GreenElegantProfessionalResume(1).pdf">
                                 <Button variant="outline" className="mt-4">
                                     Download Resume
                                 </Button>

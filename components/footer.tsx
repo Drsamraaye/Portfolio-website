@@ -28,10 +28,10 @@ const FooterSection = () => {
                         {/* Social Icons */}
                         <div className="flex justify-center md:justify-start gap-4">
                             {[
-                                { icon: <FaLinkedinIn />, href: "https://www.linkedin.com/in/guiled-hussein-222233261?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", color: "hover:text-[#0077b5]" },
-                                { icon: <FaGithub />, href: "https://github.com/GuiledHussein", color: "hover:text-foreground" },
-                                { icon: <FaTwitter />, href: "#", color: "hover:text-[#1DA1F2]" },
-                                { icon: <CiInstagram />, href: "https://www.instagram.com/guuiled/profilecard/?igsh=eXF6b21xZ3BmYnJ6", color: "hover:text-[#E1306C]" }
+                                { icon: <FaLinkedinIn />, href: "https://www.linkedin.com/in/guiled-husein-a18b8038a/", color: "hover:text-[#0077b5]" },
+                                { icon: <FaGithub />, href: "https://github.com/Drsamraaye", color: "hover:text-foreground" },
+                                { icon: <FaTwitter />, href: "https://x.com/Guuleed701", color: "hover:text-[#1DA1F2]" },
+                                { icon: <CiInstagram />, href: "https://www.instagram.com/guiledjr/?hl=en", color: "hover:text-[#E1306C]" }
                             ].map((social, idx) => (
                                 <a
                                     key={idx}

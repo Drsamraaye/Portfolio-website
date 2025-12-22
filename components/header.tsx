@@ -13,6 +13,7 @@ const menuItems = [
     { name: 'Services', href: '#Work' },
     { name: 'Portfolio', href: '#Project' },
     { name: 'Education', href: '#Education' },
+    { name: 'Hackathon', href: '#Hackathon' },
     { name: 'Resume', href: '/resume' }
 ]
 

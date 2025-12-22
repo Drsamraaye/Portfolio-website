@@ -7,6 +7,7 @@ import StatsSection from './stats'
 import Image from "next/image";
 import Products from './cards'
 import AboutMe from './Aboutme'
+import Hackathon from './hackathon'
 import Service from './service'
 import Education from './Education'
 import FooterSection from './footer'
@@ -109,6 +110,7 @@ export default function HeroSection() {
 
         <LogoCloudTwo />
         <AboutMe />
+        <Hackathon />
         <Products />
         <Service />
         <Education />
