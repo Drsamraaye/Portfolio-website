@@ -29,7 +29,7 @@ const AboutMe: React.FC = () => {
           <div className="relative rounded-[2.5rem] overflow-hidden glass p-4 border border-black/5 dark:border-white/10 rotate-3 transition-transform duration-500 group-hover:rotate-0">
             <div className="relative rounded-[2rem] overflow-hidden aspect-[4/5] bg-card">
               <Image
-                src="/imges/WhatsApp Image 2025-09-18 at 18.12.17_736e82e5.jpg"
+                src="/imges/1767716468021.jpg"
                 alt="Profile"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -92,7 +92,7 @@ const AboutMe: React.FC = () => {
           </div>
 
           <div className="pt-4">
-            <a href="/imges/GreenElegantProfessionalResume(1).pdf" download="Guiled_Hussein_Resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/CV.pdf" download="Guiled_Hussein_CV.pdf">
               <button className="px-10 py-4 rounded-xl font-bold text-primary-foreground bg-primary hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/25 group flex items-center gap-3">
                 Download Resume
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
