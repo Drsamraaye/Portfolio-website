@@ -18,88 +18,89 @@ const skills: Skill[] = [
 
 const AboutMe: React.FC = () => {
   return (
-    <section id='Resume' className="container mx-auto py-32 px-4 md:px-8 font-sans relative">
-      {/* Background Ambience */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-96 h-96 bg-secondary/10 rounded-full blur-[128px] -z-10"></div>
+    <section id='Resume' className="py-24 lg:py-40 bg-transparent font-sans relative overflow-hidden transition-colors duration-500">
+      <div className="container mx-auto max-w-[1400px] px-6 md:px-12">
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-32 items-center">
 
-      <div className="flex flex-col lg:flex-row gap-16 items-center">
+          {/* Left Column: Image & Stats */}
+          <div className="w-full lg:w-1/2 relative">
+            <div className="relative z-10 rounded-[2.5rem] lg:rounded-[3rem] overflow-hidden glass p-3 lg:p-4 border border-foreground/5 transition-transform duration-700 hover:rotate-2">
+              <div className="relative rounded-[2rem] lg:rounded-[2.5rem] overflow-hidden aspect-[4/5] bg-muted">
+                <Image
+                  src="/imges/1767716468021.jpg"
+                  alt="Profile"
+                  fill
+                  className="object-cover transition-transform duration-1000 hover:scale-110 grayscale-[0.1] dark:grayscale-0"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90"></div>
 
-        {/* Left Column: Image & Stats */}
-        <div className="w-full lg:w-5/12 relative group">
-          <div className="relative rounded-[2.5rem] overflow-hidden glass p-4 border border-black/5 dark:border-white/10 rotate-3 transition-transform duration-500 group-hover:rotate-0">
-            <div className="relative rounded-[2rem] overflow-hidden aspect-[4/5] bg-card">
-              <Image
-                src="/imges/1767716468021.jpg"
-                alt="Profile"
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80"></div>
-
-              <div className="absolute bottom-8 left-8 right-8 text-white">
-                <p className="text-sm font-light uppercase tracking-widest mb-2 opacity-80">Experience</p>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-5xl font-bold">2+</span>
-                  <span className="text-xl">Years</span>
+                <div className="absolute bottom-6 left-6 lg:bottom-10 lg:left-10 lg:right-10 text-foreground">
+                  <p className="text-[10px] lg:text-xs font-black uppercase tracking-[0.3em] mb-2 lg:mb-4 text-primary">Years of Experience</p>
+                  <div className="flex items-baseline gap-2 lg:gap-3">
+                    <span className="text-5xl lg:text-7xl font-black tracking-tighter">2+</span>
+                    <span className="text-sm lg:text-lg font-bold text-muted-foreground uppercase">SUCCESSFUL YEARS</span>
+                  </div>
                 </div>
               </div>
             </div>
+
+            {/* Decorative background aura */}
+            <div className="absolute -top-10 -left-10 lg:-top-20 lg:-left-20 w-[300px] lg:w-[400px] h-[300px] lg:h-[400px] bg-primary/10 dark:bg-primary/20 rounded-full blur-[100px] lg:blur-[120px] -z-10 animate-pulse-glow"></div>
           </div>
 
-          {/* Decorative Elements */}
-          <div className="absolute -z-10 top-10 -left-10 w-full h-full border-2 border-primary/30 rounded-[2.5rem] -rotate-3"></div>
-        </div>
+          {/* Right Column: Content */}
+          <div className="w-full lg:w-1/2 space-y-10 lg:space-y-12">
+            <div className="space-y-4 lg:space-y-6 text-center lg:text-left">
+              <span className="inline-block px-4 py-1.5 rounded-full glass border border-foreground/10 text-[9px] lg:text-[10px] font-black uppercase tracking-[0.4em] text-primary">About Me</span>
+              <h2 className="text-4xl md:text-7xl font-black text-foreground leading-tight uppercase tracking-tighter">
+                Crafting <span className="text-primary italic">Digital</span> <br /> Experiences
+              </h2>
+              <div className="h-1.5 w-20 lg:w-24 bg-primary rounded-full mx-auto lg:mx-0"></div>
+            </div>
 
-        {/* Right Column: Content */}
-        <div className="w-full lg:w-7/12 space-y-10">
-          <div>
-            <h4 className="text-primary font-bold tracking-widest uppercase mb-4 text-sm">About Me</h4>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Crafting <span className="text-gradient">Digital Experiences</span> That Matter.
-            </h2>
-            <div className="h-1.5 w-24 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
-          </div>
+            <div className="space-y-6 lg:space-y-8 text-base lg:text-lg text-muted-foreground font-medium leading-[1.8] text-center lg:text-left">
+              <p>
+                I am a results-driven <strong className="text-foreground font-black">Full-Stack Developer</strong> and <strong className="text-foreground font-black">Digital Strategist</strong> driven by a passion for solving complex problems. I engineer robust web applications that bridge the gap between technical excellence and user-centric design.
+              </p>
+              <p>
+                With a toolkit that spans <strong className="text-primary font-black">JavaScript, React, Next.js, and Node.js</strong>, I build scalable systems that power modern businesses.
+              </p>
+            </div>
 
-          <div className="space-y-6 text-muted-foreground text-lg font-light leading-relaxed">
-            <p>
-              I am a results-driven <strong className="text-foreground font-medium">Full-Stack Developer</strong> and <strong className="text-foreground font-medium">Digital Marketing Specialist</strong> driven by a passion for solving complex problems. I engineer robust web applications that bridge the gap between technical excellence and user-centric design.
-            </p>
-            <p>
-              With a toolkit that spans <strong className="text-foreground font-medium">JavaScript, React, Next.js, and Node.js</strong>, I build scalable systems that power modern businesses. My approach combines clean code architecture with creative marketing strategies to ensure every product I build not only functions flawlessly but also reaches its intended audience effectively.
-            </p>
-          </div>
+            <div className="space-y-8 lg:space-y-10 group">
+              <h3 className="text-xl lg:text-2xl font-black text-foreground uppercase tracking-tight flex items-center gap-4 justify-center lg:justify-start">
+                Technical Proficiency
+                <div className="h-px bg-foreground/10 flex-grow hidden lg:block"></div>
+              </h3>
 
-          <div className="space-y-8">
-            <h3 className="text-2xl font-bold text-foreground">Technical Proficiency</h3>
-            <div className="grid grid-cols-1 gap-6">
-              {skills.map((skill) => (
-                <div key={skill.name} className="group">
-                  <div className="flex justify-between mb-2">
-                    <span className="font-medium text-foreground group-hover:text-primary transition-colors">{skill.name}</span>
-                    <span className="font-mono text-sm text-muted-foreground">{skill.percentage}%</span>
-                  </div>
-                  <div className="h-2.5 bg-muted rounded-full overflow-hidden">
-                    <div
-                      className={`h-full rounded-full bg-gradient-to-r ${skill.color} relative overflow-hidden transition-all duration-1000 ease-out`}
-                      style={{ width: `${skill.percentage}%` }}
-                    >
-                      <div className="absolute inset-0 bg-white/20 animate-[shimmer_2s_infinite]"></div>
+              <div className="grid grid-cols-1 gap-6 lg:gap-8">
+                {skills.map((skill) => (
+                  <div key={skill.name} className="space-y-2 lg:space-y-3">
+                    <div className="flex justify-between items-end">
+                      <span className="text-xs lg:text-sm font-black uppercase tracking-widest text-foreground/90">{skill.name}</span>
+                      <span className="text-[10px] lg:text-xs font-black text-primary font-mono">{skill.percentage}%</span>
+                    </div>
+                    <div className="h-1.5 bg-foreground/5 rounded-full overflow-hidden">
+                      <div
+                        className={`h-full rounded-full bg-primary relative transition-all duration-1000 ease-out`}
+                        style={{ width: `${skill.percentage}%` }}
+                      >
+                        <div className="absolute inset-0 bg-white/30 skew-x-12 translate-x-full animate-shimmer"></div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
 
-          <div className="pt-4">
-            <a href="/CV.pdf" download="Guiled_Hussein_CV.pdf">
-              <button className="px-10 py-4 rounded-xl font-bold text-primary-foreground bg-primary hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/25 group flex items-center gap-3">
+            <div className="pt-4 lg:pt-6 flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center lg:justify-start">
+              <a href="/CV.pdf" download="Guiled_Hussein_CV.pdf" className="group relative px-10 lg:px-12 py-5 lg:py-6 bg-foreground text-background font-black uppercase tracking-widest rounded-full hover:scale-105 active:scale-95 transition-all duration-500 shadow-xl dark:shadow-[0_0_30px_rgba(255,255,255,0.1)] text-center">
                 Download Resume
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
-              </button>
-            </a>
+              </a>
+              <a href="#contact" className="px-10 lg:px-12 py-5 lg:py-6 border-2 border-foreground/10 text-foreground font-black uppercase tracking-widest rounded-full hover:bg-foreground/5 transition-all duration-500 text-center">
+                Contact Me
+              </a>
+            </div>
           </div>
         </div>
       </div>

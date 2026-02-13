@@ -38,85 +38,54 @@
 */
 
 :root {
-  /* LIGHT MODE - Professional White Studio */
-  /* #ffffff */
+  /* LIGHT MODE - Minimalist Studio */
   --background: 0 0% 100%;
-
-  /* #0a0a0f - Deep Black/Blue Text */
-  --foreground: 240 20% 5%;
-
-  /* #f8f8fa - Very subtle grey for cards */
-  --card: 240 4% 97%;
-  --card-foreground: 240 20% 5%;
-
+  --foreground: 240 10% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
   --popover: 0 0% 100%;
-  --popover-foreground: 240 20% 5%;
-
-  /* #7c3aed - Retain Violet as Primary Identity */
-  --primary: 263 80% 60%;
-  --primary-foreground: 0 0% 100%;
-
-  /* #db2777 - Pink */
-  --secondary: 330 70% 50%;
+  --popover-foreground: 240 10% 3.9%;
+  --primary: 343 100% 50%;
+  /* #ff0048 - Vivid Pink/Red */
+  --primary-foreground: 355.7 100% 97.3%;
+  --secondary: 343 100% 40%;
   --secondary-foreground: 0 0% 100%;
-
-  /* #f1f5f9 - Slate 100 for muted backgrounds */
-  --muted: 210 40% 96%;
-  --muted-foreground: 215 25% 40%;
-  /* Darkened from 47% to 40% for better contrast */
-
-  /* #0891b2 - Cyan 600 (Darker for readability on light) */
-  --accent: 189 94% 43%;
-  --accent-foreground: 0 0% 100%;
-
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 100%;
-
-  --border: 240 5% 90%;
-  --input: 240 5% 90%;
-  --ring: 263 80% 60%;
-
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --accent: 343 100% 50%;
+  --accent-foreground: 240 5.9% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --ring: 343 100% 50%;
   --radius: 1rem;
 }
 
 .dark {
-  /* DARK MODE - Premium Deep Midnight */
-
-  /* #0a0a0f - Ultra dark (almost black) blue-grey */
-  --background: 240 20% 5%;
-
-  /* #ffffff */
+  /* DARK MODE - Premium Cyber Red */
+  --background: 0 0% 2%;
+  /* Ultra Black */
   --foreground: 0 0% 100%;
-
-  /* #13131f - Slightly lighter for cards */
-  --card: 240 24% 10%;
-  --card-foreground: 0 0% 100%;
-
-  --popover: 240 24% 10%;
-  --popover-foreground: 0 0% 100%;
-
-  /* #7c3aed - Violet 600 */
-  --primary: 263 80% 60%;
+  --card: 0 0% 4%;
+  --card-foreground: 0 0% 98%;
+  --popover: 0 0% 4%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 343 100% 50%;
+  /* #ff0048 */
   --primary-foreground: 0 0% 100%;
-
-  /* #db2777 - Pink 600 */
-  --secondary: 330 70% 50%;
-  --secondary-foreground: 0 0% 100%;
-
-  /* #1f1f2e */
-  --muted: 240 19% 15%;
-  --muted-foreground: 240 5% 65%;
-
-  /* #22d3ee - Cyan 400 */
-  --accent: 186 75% 47%;
-  --accent-foreground: 240 24% 10%;
-
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 100%;
-
-  --border: 240 20% 15%;
-  --input: 240 20% 15%;
-  --ring: 263 70% 50%;
+  --secondary: 343 80% 20%;
+  /* Deep Red */
+  --secondary-foreground: 0 0% 98%;
+  --muted: 0 0% 8%;
+  --muted-foreground: 0 0% 65%;
+  --accent: 343 100% 50%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 12%;
+  --input: 0 0% 12%;
+  --ring: 343 100% 50%;
 }
 
 @layer base {
@@ -176,5 +145,69 @@
 
   .animate-float {
     animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 4s ease-in-out infinite;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2.5s infinite;
+  }
+
+  .mask-radial-fade {
+    mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes pulse-glow {
+
+    0%,
+    100% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+
+    50% {
+      opacity: 0.8;
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%) skewX(-12deg);
+    }
+
+    100% {
+      transform: translateX(100%) skewX(-12deg);
+    }
   }
 }

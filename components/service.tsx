@@ -58,44 +58,41 @@ const services: ServiceItem[] = [
 
 const Service: React.FC = () => {
   return (
-    <section id='Work' className="py-24 bg-transparent relative">
-      <div className="container mx-auto px-4 md:px-8">
+    <section id='Work' className="py-24 lg:py-40 bg-transparent relative overflow-hidden transition-colors duration-500">
+      <div className="container mx-auto px-6 md:px-12 max-w-[1500px]">
 
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20 animate-slide-up">
-          <h2 className="text-sm font-bold uppercase text-primary tracking-[0.2em] mb-3">EXPERTISE</h2>
-          <h3 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Professional Services
-          </h3>
-          <p className="text-muted-foreground text-lg font-light leading-relaxed">
+        <div className="text-center max-w-4xl mx-auto mb-16 lg:mb-24 space-y-4 lg:space-y-6">
+          <span className="inline-block px-4 py-1.5 lg:py-2 rounded-full glass border border-foreground/10 text-[9px] lg:text-[10px] font-black uppercase tracking-[0.4em] text-primary">Capabilities</span>
+          <h2 className="text-4xl md:text-7xl font-black text-foreground leading-tight uppercase tracking-tighter">
+            Professional <span className="text-primary italic">Services</span>
+          </h2>
+          <p className="text-base lg:text-lg text-muted-foreground font-medium leading-relaxed max-w-2xl mx-auto">
             I combine technical expertise with creative problem-solving to deliver comprehensive digital solutions.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 lg:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (
             <div
               key={service.id}
-              className="group relative p-1 rounded-3xl bg-transparent transition-all duration-300 hover:-translate-y-2"
+              className="group relative transition-all duration-500 hover:-translate-y-2"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
+              <div className="absolute inset-0 bg-primary/10 dark:bg-primary/20 rounded-[2.5rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl -z-10"></div>
 
-              <div className="relative h-full bg-card/40 backdrop-blur-xl border border-border p-8 rounded-3xl overflow-hidden hover:border-primary/30 transition-colors">
-
-                {/* Hover Gradient Bloom */}
-                <div className="absolute -right-10 -top-10 w-32 h-32 bg-primary/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="h-full bg-card/50 dark:bg-black border border-foreground/5 p-6 sm:p-10 rounded-[2.5rem] overflow-hidden hover:border-primary/40 backdrop-blur-xl transition-all duration-500 flex flex-col items-center text-center lg:items-start lg:text-left">
 
                 {/* Icon */}
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/10 to-transparent border border-primary/10 flex items-center justify-center text-primary mb-8 group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
+                <div className="w-14 h-14 lg:w-20 lg:h-20 rounded-2xl bg-foreground/5 border border-foreground/10 flex items-center justify-center text-primary mb-6 lg:mb-10 group-hover:scale-110 group-hover:bg-primary/10 group-hover:border-primary/30 transition-all duration-500 shadow-xl [&_svg]:w-7 [&_svg]:h-7 lg:[&_svg]:w-10 lg:[&_svg]:h-10">
                   {service.icon}
                 </div>
 
-                <h4 className="text-xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
+                <h4 className="text-xl lg:text-2xl font-black text-foreground mb-3 lg:mb-4 group-hover:text-primary transition-all duration-500 uppercase tracking-tight">
                   {service.title}
                 </h4>
 
-                <p className="text-muted-foreground leading-relaxed text-sm">
+                <p className="text-muted-foreground leading-relaxed font-medium text-xs lg:text-base">
                   {service.description}
                 </p>
               </div>
