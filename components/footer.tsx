@@ -3,7 +3,6 @@ import Link from "next/link";
 import { FaLinkedinIn, FaGithub, FaTwitter, FaPhone, FaWhatsapp } from 'react-icons/fa';
 import { CiInstagram } from "react-icons/ci";
 import { MdEmail } from "react-icons/md";
-import { IoLanguageSharp } from "react-icons/io5";
 
 const FooterSection = () => {
     return (
@@ -90,7 +89,7 @@ const FooterSection = () => {
                                 className="inline-flex items-center gap-4 px-8 lg:px-10 py-4 lg:py-5 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-2xl font-black uppercase tracking-widest transition-all duration-500 shadow-xl hover:shadow-[#25D366]/40 transform hover:-translate-y-1 active:scale-95"
                             >
                                 <FaWhatsapp size={22} />
-                                <span className="text-sm">Let's Talk Info</span>
+                                <span className="text-sm">Let&apos;s Talk Info</span>
                             </a>
                         </div>
                     </div>

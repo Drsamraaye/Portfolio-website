@@ -1,10 +1,9 @@
 'use client'
 import Link from 'next/link'
-import { Menu, X, MessageSquare, User, CheckCircle } from 'lucide-react'
+import { MessageSquare, User, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import React, { useEffect, useState } from 'react'
 import { cn } from '@/lib/utils'
-import Image from "next/image";
 import { ModeToggle } from './mode-toggle';
 
 const menuItems = [
