@@ -3,23 +3,31 @@ import React from 'react';
 
 const educationData = [
   {
-    year: '2024 - Present',
-    degree: 'Diploma in Web Development',
-    school: 'Advanced Tech Institute',
-    description: 'Specializing in full-stack technologies including React, Next.js, Node.js, and modern CSS frameworks. Building production-ready applications with best practices in responsive design and API integration.'
-  },
-  {
-    year: '2021 - 2023',
-    degree: 'Diploma in ICT',
-    school: 'Tech Valley College',
-    description: 'Completed comprehensive ICT training covering software development, database management, networking, and system administration. Gained hands-on experience with foundational development tools.'
-  },
-  {
     year: '2019 - 2022',
     degree: 'Secondary Education',
     school: 'Abdalla Golo Secondary School',
     description: 'Focused on sciences and technology. Developed critical thinking and analytical problem-solving abilities that complement technical expertise.'
-  }
+  },
+  {
+    year: '2021 - 2023',
+    degree: 'Diploma in ICT',
+    school: 'TISQAAD COMPUTER AND SCEINCE COLLEGE',
+    description: 'Completed comprehensive ICT training covering software development, database management, networking, and system administration. Gained hands-on experience with foundational development tools.'
+  },
+  {
+    year: '2024 - 2025',
+    degree: 'Diploma in Web Development',
+    school: 'TIIGSI COLLEGE',
+    description: 'Specializing in full-stack technologies including React, Next.js, Node.js, and modern CSS frameworks. Building production-ready applications with best practices in responsive design and API integration.'
+  },
+  {
+    year: '2025 - 2026',
+    degree: 'MOBILE APP DEVELOPMENT',
+    school: 'TELESOM ACADEMY',
+    description: 'Completed comprehensive Mobile App Development training covering software development, database management, networking, and system administration. Gained hands-on experience with foundational development tools.'
+  },
+
+
 ];
 
 const Education = () => {

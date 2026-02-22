@@ -10,6 +10,7 @@ import AboutMeSection from './Aboutme'
 import Hackathon from './hackathon'
 import Service from './service'
 import Education from './Education'
+import ContactForm from './ContactForm'
 import FooterSection from './footer'
 import WhatsAppButton from './whatsapp-button'
 
@@ -129,6 +130,7 @@ export default function HeroSection() {
         <Service />
         <Education />
         <StatsSection />
+        <ContactForm />
         <FooterSection />
       </main>
       <WhatsAppButton />

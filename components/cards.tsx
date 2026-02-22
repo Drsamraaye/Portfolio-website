@@ -24,7 +24,7 @@ const projects: Project[] = [
     image: '/imges/Screenshot 2026-02-13 150700.png',
     title: 'Shaamil Library System',
     category: 'Educational Tool',
-    description: 'A modern library management system that handles book borrowing, inventory tracking, and user memberships with an intuitive interface.',
+    description: 'admin and user (email:admin@library.com/staff@library.com, password:staff123/admin123, A modern library management system that handles book borrowing, inventory tracking, and user memberships with an intuitive interface.',
     tech: ['React', 'Node.js', 'MongoDB', 'Tailwind'],
     link: 'https://shaamil.vercel.app/'
   },
@@ -37,12 +37,36 @@ const projects: Project[] = [
     link: 'https://iibsahal.vercel.app/'
   },
   {
+    image: '/alhuda.png',
+    title: 'Al-huda Islmaic Online Quran',
+    category: 'Academy',
+    description: 'A high-performance online academy platform featuring a seamless learning experience, secure teachers, and dynamic course management.',
+    tech: ['Next.js', 'Node.js', 'Tailwind', 'Redux'],
+    link: 'https://alhuda1.vercel.app/'
+  },
+  {
     image: '/imges/Screenshot 2026-02-13 151314.png',
     title: 'Drought Warning System',
     category: 'Social Impact',
     description: 'A data-driven early warning system for monitoring drought conditions and providing critical alerts to mitigate environmental risks.',
     tech: ['Next.js', 'Mapbox', 'D3.js', 'API Integration'],
     link: 'https://landinpage-dun.vercel.app/'
+  },
+  {
+    image: '/nuura.png',
+    title: 'Portfolio Website',
+    category: 'website',
+    description: 'A portfolio website for Noura Hussein make her experience and events that is make a motivation.',
+    tech: ['Next.js', 'Tailwind', 'JavaScript'],
+    link: 'https://nuura.vercel.app/'
+  },
+  {
+    image: '/mooge.png',
+    title: 'Mooge Solutions',
+    category: 'E-commerce for systems',
+    description: 'A high-performance e-commerce system for Software and website that you went and make a team for it, also you can make your own system with your office or your company.',
+    tech: ['Next.js', 'Node.js', 'Tailwind', 'Redux'],
+    link: 'https://mooge-solutions.vercel.app/'
   }
 ];
 
