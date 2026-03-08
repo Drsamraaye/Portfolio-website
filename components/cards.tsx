@@ -38,7 +38,7 @@ const projects: Project[] = [
   },
   {
     image: '/alhuda.png',
-    title: 'Al-huda Islmaic Online Quran',
+    title: 'Al-huda Islamic Online Quran',
     category: 'Academy',
     description: 'A high-performance online academy platform featuring a seamless learning experience, secure teachers, and dynamic course management.',
     tech: ['Next.js', 'Node.js', 'Tailwind', 'Redux'],
